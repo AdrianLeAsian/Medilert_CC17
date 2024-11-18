@@ -41,7 +41,8 @@ public class Dashboard extends AppCompatActivity {
         medicationCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Dashboard.this, "Medication Reminder clicked", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Dashboard.this, Medication_Reminder.class);
+                startActivity(intent);
             }
         });
 
