@@ -12,9 +12,9 @@
         android:layout_height="48dp"
         android:layout_margin="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@android:drawable/ic_menu_close_clear_cancel"
         android:contentDescription="Back"
-        tools:ignore="HardcodedText" />
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        tools:ignore="HardcodedText,ImageContrastCheck" />
 
     <!-- Mock Map View (Using ImageView as placeholder) -->
     <ImageView
