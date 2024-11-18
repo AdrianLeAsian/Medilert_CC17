@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     private EditText usernameInput, passwordInput;
-    private Button loginButton;
+    private Button loginButton, registerButton;
     private TextView forgotPasswordLink;
     private ImageView goButton, fbButton, appleButton;
 
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         usernameInput = findViewById(R.id.username_input);
         passwordInput = findViewById(R.id.password_input);
         loginButton = findViewById(R.id.login_button);
+        registerButton = findViewById(R.id.register_button);
         forgotPasswordLink = findViewById(R.id.forgotPasswordLink);
         goButton = findViewById(R.id.goButton);
         fbButton = findViewById(R.id.fbButton);
@@ -55,6 +56,15 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("username", username);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        // Register button click handler
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Register.class);
+                startActivity(intent);
             }
         });
 
