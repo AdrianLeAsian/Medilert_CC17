@@ -61,7 +61,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Demo Reminder: Click to simulate notification"
+                    android:text="Steroids 1 capsule"
                     android:layout_marginTop="8dp"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
@@ -91,7 +91,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Demo Alert: Click to simulate notification"
+                    android:text="Prostate Exam 11:30 Dr. Jhonny Sins"
                     android:layout_marginTop="8dp"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
