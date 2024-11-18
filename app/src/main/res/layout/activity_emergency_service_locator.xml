@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#F3A4A3"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <!-- Back Icon -->
+        <ImageView
+            android:id="@+id/backIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:src="ic_menu_revert"
+            android:contentDescription="Back Icon"
+            app:tint="#FFFFFF"
+            tools:ignore="HardcodedText" />
+
+        <!-- Search Bar -->
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_bar_background"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="Search settings"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textColor="#000000"
+            android:textColorHint="#FFFFFF"
+            tools:ignore="Autofill,HardcodedText,RtlHardcoded,TextContrastCheck,TouchTargetSizeCheck,VisualLintTextFieldSize" />
+
+        <!-- Menu Icon -->
+        <ImageView
+            android:id="@+id/menuIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_menu"
+            android:contentDescription="Menu Icon"
+            android:tint="#FFFFFF"
+            tools:ignore="HardcodedText,UseAppTint" />
+    </LinearLayout>
+
+    <!-- Map View -->
+    <FrameLayout
+        android:id="@+id/mapViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/backIcon"
+        android:layout_marginTop="8dp"
+        tools:ignore="NotSibling">
+
+        <!-- Add your map fragment or custom map view here -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E8E8E8"
+            android:gravity="center"
+            android:text="Map View Placeholder"
+            android:textColor="#000000"
+            tools:ignore="HardcodedText" />
+    </FrameLayout>
+
+    <!-- Bottom Bar -->
+    <View
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#F3A4A3" />
+
+</RelativeLayout>
