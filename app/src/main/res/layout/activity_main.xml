@@ -31,7 +31,6 @@
             android:layout_marginBottom="8dp"
             android:text="Welcome"
             android:textColor="#F5F5F5"
-            android:textFont="Inter"
             android:textSize="40sp"
             android:textStyle="bold"
             tools:ignore="HardcodedText,ObsoleteLayoutParam,TextContrastCheck" />
@@ -43,7 +42,6 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Enter your credentials to continue."
-            android:textFont="Inter"
             android:textSize="16sp"
             tools:ignore="HardcodedText" />
 
@@ -60,7 +58,6 @@
             android:padding="18dp"
             android:textColor="@color/white"
             android:textColorHint="#D84315"
-            android:textFont="Inter"
             android:textSize="20sp"
             tools:ignore="Autofill,HardcodedText,VisualLintTextFieldSize" />
 
@@ -76,7 +73,6 @@
             android:padding="18dp"
             android:textColor="@color/white"
             android:textColorHint="#D84315"
-            android:textFont="Inter"
             android:textSize="20sp"
             tools:ignore="Autofill,HardcodedText,TextContrastCheck,VisualLintTextFieldSize" />
 
@@ -162,7 +158,6 @@
         <!--            android:paddingEnd="8dp"-->
         <!--            android:text="EMERGENCY CALL"-->
         <!--            android:textColor="@android:color/black"-->
-        <!--            android:textFont="Inter" />-->
 
     </LinearLayout>
 
