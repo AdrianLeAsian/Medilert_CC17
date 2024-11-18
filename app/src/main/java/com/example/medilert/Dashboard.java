@@ -1,19 +1,17 @@
 package com.example.medilert;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.medilert.R;
-
 public class Dashboard extends AppCompatActivity {
-    private TextView welcomeText, username;
-    private CardView medicationCard, alertsCard, locatorCard, callCard;
+    private TextView welcomeText;
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,11 +19,11 @@ public class Dashboard extends AppCompatActivity {
 
         // Initialize views
         welcomeText = findViewById(R.id.welcomeText);
-        username = findViewById(R.id.username);
-        medicationCard = findViewById(R.id.dashCard);
-        alertsCard = findViewById(R.id.dashCard1);
-        locatorCard = findViewById(R.id.dashCard1);
-        callCard = findViewById(R.id.dashCard1);
+        TextView username = findViewById(R.id.username);
+        @SuppressLint("CutPasteId") CardView medicationCard = findViewById(R.id.dashCard);
+        @SuppressLint("CutPasteId") CardView alertsCard = findViewById(R.id.dashCard1);
+        @SuppressLint("CutPasteId") CardView locatorCard = findViewById(R.id.dashCard);
+        @SuppressLint("CutPasteId") CardView callCard = findViewById(R.id.dashCard1);
 
         // Get username from intent if passed from login/register
         String userDisplayName = getIntent().getStringExtra("username");
@@ -34,36 +32,34 @@ public class Dashboard extends AppCompatActivity {
         }
 
         // Set click listeners for cards
-        medicationCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Demo toast message
-                Toast.makeText(Dashboard.this, "Medication Reminder clicked", Toast.LENGTH_SHORT).show();
-            }
+        medicationCard.setOnClickListener(v -> {
+            // Demo toast message
+            Toast.makeText(Dashboard.this, "Medication Reminder clicked", Toast.LENGTH_SHORT).show();
         });
 
-        alertsCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Demo toast message
-                Toast.makeText(Dashboard.this, "Health Alerts clicked", Toast.LENGTH_SHORT).show();
-            }
+        alertsCard.setOnClickListener(v -> {
+            // Demo toast message
+            Toast.makeText(Dashboard.this, "Health Alerts clicked", Toast.LENGTH_SHORT).show();
         });
 
-        locatorCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Demo toast message
-                Toast.makeText(Dashboard.this, "Emergency Services Locator clicked", Toast.LENGTH_SHORT).show();
-            }
+        locatorCard.setOnClickListener(v -> {
+            // Launch Emergency Map activity
+            Intent intent = new Intent(Dashboard.this, Emergency_MAP.class);
+            startActivity(intent);
         });
 
-        callCard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Demo toast message
-                Toast.makeText(Dashboard.this, "Call for Help clicked", Toast.LENGTH_SHORT).show();
-            }
+        callCard.setOnClickListener(v -> {
+            // Launch SOS Feature activity
+            Intent intent = new Intent(Dashboard.this, SOS_Feature.class);
+            startActivity(intent);
         });
+    }
+
+    public TextView getWelcomeText() {
+        return welcomeText;
+    }
+
+    public void setWelcomeText(TextView welcomeText) {
+        this.welcomeText = welcomeText;
     }
 }
