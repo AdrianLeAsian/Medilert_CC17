@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.medilert">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
 
     <application
         android:allowBackup="true"
@@ -12,39 +17,60 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Medilert"
         tools:targetApi="31">
+
+        <!-- Alarm Receiver -->
+        <receiver
+            android:name=".AlarmReceiver"
+            android:exported="false" />
+
+        <!-- Medication Reminder Activity -->
         <activity
             android:name=".Medication_Reminder"
             android:exported="false" />
+
+        <!-- HeReM Activity -->
         <activity
             android:name=".HeReM"
             android:exported="false" />
+
+        <!-- Emergency Map Activity -->
         <activity
             android:name=".Emergency_MAP"
             android:exported="false" />
+
+        <!-- Emergency Service Locator Activity -->
         <activity
             android:name=".Emergency_Service_Locator"
             android:exported="false" />
+
+        <!-- Dashboard Activity -->
         <activity
             android:name=".Dashboard"
             android:exported="false" />
+
+        <!-- SOS Feature Call Activity -->
         <activity
             android:name=".SOS_Feature_Call"
             android:exported="false" />
+
+        <!-- SOS Feature Activity -->
         <activity
             android:name=".SOS_Feature"
             android:exported="false" />
+
+        <!-- Register Activity -->
         <activity
             android:name=".Register"
             android:exported="false" />
+
+        <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

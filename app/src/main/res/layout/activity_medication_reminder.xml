@@ -64,6 +64,15 @@
                     android:text="8:00 AM - Take with food"
                     android:layout_marginTop="8dp"
                     tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/alarmButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Set Alarm"
+                    android:backgroundTint="#2196F3"
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -94,6 +103,15 @@
                     android:text="8:00 PM - Take before bed"
                     android:layout_marginTop="8dp"
                     tools:ignore="HardcodedText" />
+
+                <Button
+                    android:id="@+id/alarmButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Set Alarm"
+                    android:backgroundTint="#2196F3"
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
